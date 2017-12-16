@@ -11,10 +11,11 @@ const nodeAndElectronExternals = [
   'path',
   'os',
   'url',
-  'child_process'
+  'child_process',
 ];
 
 const thirdPartExternals = [
+  'monaco-editor/min/vs/loader',
   ...Object.keys(appPkg.dependencies || {}),
 ];
 

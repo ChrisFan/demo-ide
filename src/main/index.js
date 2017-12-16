@@ -2,6 +2,7 @@ import { app } from 'electron';
 import is from 'electron-is';
 import log from 'electron-log';
 import * as mainWindow from './mainWindow';
+import * as vars from './vars';
 
 log.transports.file.level = 'info';
 log.info('(main/index) >>>>>>>>>>>>>>>>>>');
@@ -24,3 +25,6 @@ app.on('window-all-closed', () => {
 });
 
 app.on('quit', () => {});
+
+// expose variables to renderer
+global.getVars = type => vars.getVars(type);

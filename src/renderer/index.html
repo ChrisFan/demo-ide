@@ -1,9 +1,28 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-  </head>
-  <body>
-      Hello 123444
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    #root {
+      height: 100%;
+      display: flex;
+    }
+  </style>
+  <link rel="stylesheet" href="{{distPath}}index.css" />
+</head>
+<body>
+  <div id="root"></div>
+  <script src="{{distPath}}index.js"></script>
+  <script>
+    // Workaround monaco-typescript not understanding the environment
+    self.process.browser = true;
+  </script>
+</body>
 </html>

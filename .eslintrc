@@ -6,9 +6,12 @@
     "import/no-extraneous-dependencies": [0],
     "import/extensions": [0],
     "import/no-unresolved": [0],
-    "global-require": [0]
+    "global-require": [0],
+    "react/prop-types": [0],
+    "react/jsx-filename-extension": [1, { "extensions": [".js"] }]
   },
   "globals": {
-    "$dirname": true
+    "$dirname": true,
+    "window": true
   }
 }

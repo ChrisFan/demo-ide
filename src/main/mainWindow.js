@@ -16,6 +16,7 @@ export function open() {
     width: 1400,
     height: 800,
     title: 'A simple IDE',
+    webPreferences: { webSecurity: false },
   });
   mainWindow.on('close', () => { mainWindow = null; });
   mainWindow.loadURL(getUrl());
